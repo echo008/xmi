@@ -15,7 +15,7 @@ const componentName = baseName.replace(/(^\w|-\w)/g, letter => letter.slice(-1).
 
 // 模板文件位置
 const ownPath = fs.realpathSync(__dirname)
-const tplPath = path.join(ownPath, 'template-page')
+const tplPath = path.join(ownPath, '..', 'template-page')
 const tplJsPath = path.join(tplPath, 'page.js')
 const tplCssPath = path.join(tplPath, 'page.less')
 
@@ -23,6 +23,7 @@ const tplCssPath = path.join(tplPath, 'page.less')
 function copyFile(srcFile, distFile, data) {
     ejs.renderFile(srcFile, data, (err, str) => {
         if (!err) {
+            fs.ensureFileSync(distFile)
             fs.writeFileSync(distFile, str)
         }
     })
