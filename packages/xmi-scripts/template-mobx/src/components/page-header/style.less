@@ -1,0 +1,39 @@
+@import "../../styles/variables.less";
+@header-height: 60px;
+
+.page-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: @header-height;
+    line-height: @header-height;
+    color: #fff;
+    font-size: 18px;
+    background-color: #394456;
+    overflow: hidden;
+    z-index: 99;
+
+    > .content {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 200px;
+
+        .logo {
+            height: 32px;
+            padding-right: 10px;
+            vertical-align: -10px;
+        }
+
+        .sub-title {
+            padding-left: 10px;
+            font-size: 16px;
+            vertical-align: 1px;
+            &::before {
+                content: '|';
+                padding-right: 10px;
+                vertical-align: top;
+            }
+        }
+    }
+}

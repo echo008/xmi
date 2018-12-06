@@ -1,0 +1,32 @@
+[{
+    "text": "首页",
+    "link": "/home",
+    "icon": "home"
+}, {
+    "text": "开票数据",
+    "link": "/invoice",
+    "children": [{
+        "text": "开票明细记录",
+        "link": "/invoice/records"
+    }, {
+        "text": "发票月度汇总",
+        "link": "/invoice/summary"
+    }]
+}, {
+    "text": "集团管理",
+    "link": "/groups",
+    "children": [{
+        "text": "商户管理",
+        "link": "/groups/merchant"
+    }, {
+        "text": "商户批量导入",
+        "link": "/groups/merchant-import"
+    }]
+}, {
+    "text": "系统设置",
+    "link": "/system",
+    "children": [{
+        "text": "接口配置",
+        "link": "/system/interface-config"
+    }]
+}]

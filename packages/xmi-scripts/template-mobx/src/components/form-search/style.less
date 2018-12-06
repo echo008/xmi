@@ -1,0 +1,36 @@
+@import "../../styles/variables.less";
+@import "../../styles/mixins.less";
+
+.form-search {
+    > .ant-row {
+        .ant-col {
+            margin-bottom: @content-spacing;
+        }
+        .field-wrapper {
+            height: 32px;
+            .label-wrapper {
+                display: inline-block;
+                width: 30%;
+                height: @input-height-base;
+                line-height: @input-height-base / 2;
+                text-align: right;
+            }
+            .control-wrapper {
+                display: inline-block;
+                width: 70%;
+
+                // input
+                .ant-input,
+                // select
+                .ant-select,
+                // date-picker
+                .ant-calendar-picker,
+                // cascader-picker
+                .ant-cascader-picker {
+                    width: 100%;
+                    max-width: 264px;
+                }
+            }
+        }
+    }
+}

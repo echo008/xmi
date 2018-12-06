@@ -1,0 +1,108 @@
+@import './variables.less';
+@import './mixins.less';
+
+@header-height: 64px;
+@sider-width: 256px;
+@bg-sider: #394456;
+@bg-menu-sub: #282F3C;
+
+.basic-layout {
+    height: 100%;
+    background-color: #F0F2F5;
+    > .ant-layout-sider {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: @sider-width;
+        color: #fff;
+        background-color: @bg-sider;
+        z-index: 99;
+        .logo {
+            height: @header-height;
+            line-height: 32px;
+            padding: 16px 15px;
+            font-size: 16px;
+            text-align: center;
+            background-color: #44536A;
+            img {
+                height: 32px;
+                vertical-align: top;
+            }
+            .title {
+                padding-left: 10px;
+                font-size: 18px;
+            }
+            .sub-title {
+                position: relative;
+                padding-left: 20px;
+                &::before {
+                    content: '';
+                    width: 1px;
+                    height: 70%;
+                    position: absolute;
+                    left: 10px;
+                    top: 4px;
+                    border: 1px solid #848484;
+                }
+            }
+        }
+        .ant-menu {
+            background-color: @bg-sider;
+            a.ant-menu-item {
+                padding-left: @content-spacing;
+            }
+        }
+        .ant-menu.ant-menu-sub {
+            background-color: @bg-menu-sub;
+        }
+    }
+
+    > .container {
+        min-width: 1024px;
+        padding-left: @sider-width;
+        > .header {
+            background-color: #fff;
+            padding: 0 @content-spacing;
+            .ant-breadcrumb {
+                float: left;
+                line-height: @header-height;
+                .anticon {
+                    font-size: 14px;
+                }
+                a:hover {
+                    color: @link-color;
+                }
+            }
+            .user-nav {
+                float: right;
+                list-style: none;
+                > li {
+                    display: inline-block;
+                    list-style: none;
+                }
+
+                > li + li {
+                    margin-left: 20px;
+                }
+
+                a {
+                    color: @text-color;
+                }
+            }
+        }
+
+        > .content {
+            min-height: 400px;
+            margin: @content-spacing @content-spacing 60px @content-spacing;
+            > section {
+                padding: @content-spacing;
+                background-color: #fff;
+            }
+        }
+
+        > .page-footer {
+            left: @sider-width;
+        }
+    }
+}

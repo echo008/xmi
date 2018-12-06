@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+// input::-webkit-input-placeholder,
+// textarea::-webkit-input-placeholder {
+//     color: @color-text-placeholder;
+// }
+
+.clearfix {
+    .clearfix();
+}
+
+.truncate {
+    .truncate();
+}
+
+.content-spacing {
+    padding: @content-spacing;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+// ant-modal-error
+.ant-modal-error .ant-modal-close, .ant-modal-error .ant-modal-header {
+    display: none;
+}
+.ant-modal-error .ant-modal-body {
+    padding: 24px 32px;
+    > .icon-close-circle {
+        float: left;
+        font-size: 22px;
+        margin-right: 16px;
+        color: #f5222d;
+    }
+    .ant-modal-confirm-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: @heading-color;
+        overflow: hidden;
+    }
+    .ant-modal-confirm-content {
+        margin-top: 8px;
+        margin-left: 38px;
+        font-size: @font-size-base;
+        color: rgba(0, 0, 0, .65);
+    }
+}
+.ant-modal-error .ant-modal-footer {
+    border-top: none;
+    padding-bottom: 24px;
+}
+
+// button wrapper
+.button-wrapper {
+    > .ant-btn + .ant-btn {
+        margin-left: @content-spacing;
+    }
+}
+
+// action column
+.ant-table-tbody .action-column a {
+    position: relative;
+    font-size: @font-size-base;
+    color: @link-color;
+    &:hover,
+    &:active {
+        color: fade(@link-color, 80%);
+    }
+    & + a {
+        margin-left: 20px;
+       &::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 4px;
+            width: 1px;
+            height: 70%;
+            background-color: @disabled-color;
+        }
+    }
+}

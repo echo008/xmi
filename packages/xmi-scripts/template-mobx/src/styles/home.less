@@ -1,0 +1,47 @@
+@import "./variables.less";
+
+.page-home {
+    .statistic-info .ant-col {
+        margin-bottom: @content-spacing;
+    }
+
+    .panel {
+        min-width: 200px;
+        position: relative;
+        padding: @content-spacing;
+        padding-left: 110px;
+        background-color: #fff;
+        border-radius: 4px;
+        border: solid 1px #e9e9e9;
+
+        img {
+            position: absolute;
+            left: 28px;
+            top: 36px;
+            width: 54px;
+            height: 54px;
+        }
+        title {
+            display: block;
+            color: @text-color-secondary;
+        }
+        p {
+            font-family: ArialMT;
+            font-size: 40px;
+            color: @heading-color;
+            margin: 0;
+        }
+    }
+
+    .merchant-info {
+        > div {
+            text-align: center;
+        }
+
+        h1 {
+            margin: 100px 0 50px;
+            font-size: 30px;
+            font-weight: 500;
+        }
+    }
+}
