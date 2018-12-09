@@ -1,0 +1,40 @@
+{
+  "name": "xmi-docgen",
+  "version": "1.0.0",
+  "description": "A CLI and toolkit to generate document from comments",
+  "bin": {
+    "xmi-docgen": "bin/xmi-docgen.js"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "main": "./lib/main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echo008/xmi/tree/master/packages/xmi-docgen.git"
+  },
+  "keywords": [
+    "document",
+    "generate"
+  ],
+  "author": "Echo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/echo008/xmi/issues"
+  },
+  "homepage": "https://github.com/echo008/xmi/tree/master/packages/xmi-docgen#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "esprima-extract-comments": "^1.1.0",
+    "node-dir": "^0.1.17"
+  }
+}

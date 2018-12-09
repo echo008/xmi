@@ -1,17 +1,17 @@
-# Create React App [![Build Status](https://travis-ci.org/facebook/create-react-app.svg?branch=master)](https://travis-ci.org/facebook/create-react-app) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/facebook/create-react-app/pulls) 
+# Create React App [![Build Status](https://travis-ci.org/echo008/xmi.svg?branch=master)](https://travis-ci.org/echo008/xmi) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/echo008/xmi/pulls) 
 
 Create React apps with no build configuration.
 
 - [Creating an App](#creating-an-app) – How to create a new app.
-- [User Guide](https://facebook.github.io/create-react-app/docs/folder-structure) – How to develop apps bootstrapped with Create React App.
+- [User Guide](https://echo008.github.io/xmi/docs/folder-structure) – How to develop apps bootstrapped with Create React App.
 
 Create React App works on macOS, Windows, and Linux.<br>
-If something doesn’t work, please [file an issue](https://github.com/facebook/create-react-app/issues/new).
+If something doesn’t work, please [file an issue](https://github.com/echo008/xmi/issues/new).
 
 ## Quick Overview
 
 ```sh
-npx create-react-app my-app
+npx xmi my-app
 cd my-app
 npm start
 ```
@@ -22,7 +22,7 @@ Then open [http://localhost:3000/](http://localhost:3000/) to see your app.<br>
 When you’re ready to deploy to production, create a minified bundle with `npm run build`.
 
 <p align='center'>
-<img src='https://cdn.rawgit.com/facebook/create-react-app/27b42ac/screencast.svg' width='600' alt='npm start'>
+<img src='https://cdn.rawgit.com/echo008/xmi/27b42ac/screencast.svg' width='600' alt='npm start'>
 </p>
 
 ### Get Started Immediately
@@ -41,7 +41,7 @@ To create a new app, you may choose one of the following methods:
 ### npx
 
 ```sh
-npx create-react-app my-app
+npx xmi my-app
 ```
 
 _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
@@ -49,7 +49,7 @@ _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7
 ### npm
 
 ```sh
-npm init react-app my-app
+npm init xmi my-app
 ```
 
 _`npm init <initializer>` is available in npm 6+_
@@ -57,7 +57,7 @@ _`npm init <initializer>` is available in npm 6+_
 ### Yarn
 
 ```sh
-yarn create react-app my-app
+yarn create xmi my-app
 ```
 
 _`yarn create` is available in Yarn 0.25+_
@@ -103,7 +103,7 @@ The page will automatically reload if you make changes to the code.<br>
 You will see the build errors and lint warnings in the console.
 
 <p align='center'>
-<img src='https://cdn.rawgit.com/marionebl/create-react-app/9f62826/screencast-error.svg' width='600' alt='Build errors'>
+<img src='https://cdn.rawgit.com/marionebl/xmi/9f62826/screencast-error.svg' width='600' alt='Build errors'>
 </p>
 
 ### `npm test` or `yarn test`
@@ -111,7 +111,7 @@ You will see the build errors and lint warnings in the console.
 Runs the test watcher in an interactive mode.<br>
 By default, runs tests related to files changed since the last commit.
 
-[Read more about testing.](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
+[Read more about testing.](https://github.com/echo008/xmi/blob/master/packages/xmi-scripts/template/README.md#running-tests)
 
 ### `npm run build` or `yarn build`
 
@@ -124,11 +124,11 @@ Your app is ready to be deployed.
 
 ## User Guide
 
-You can find detailed instructions on using Create React App and many tips in [its documentation](https://facebook.github.io/create-react-app/).
+You can find detailed instructions on using Create React App and many tips in [its documentation](https://echo008.github.io/xmi/).
 
 ## How to Update to New Versions?
 
-Please refer to the [User Guide](https://facebook.github.io/create-react-app/docs/updating-to-new-releases) for this and other information.
+Please refer to the [User Guide](https://echo008.github.io/xmi/docs/updating-to-new-releases) for this and other information.
 
 ## Philosophy
 
@@ -148,12 +148,12 @@ Your environment will have everything you need to build a modern single-page Rea
 - A fast interactive unit test runner with built-in support for coverage reporting.
 - A live development server that warns about common mistakes.
 - A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
-- An offline-first [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) and a [web app manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/), meeting all the [Progressive Web App](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app) criteria. (_Note: Using the service worker is opt-in as of `react-scripts@2.0.0` and higher_)
+- An offline-first [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) and a [web app manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/), meeting all the [Progressive Web App](https://echo008.github.io/xmi/docs/making-a-progressive-web-app) criteria. (_Note: Using the service worker is opt-in as of `xmi-scripts@2.0.0` and higher_)
 - Hassle-free updates for the above tools with a single dependency.
 
 Check out [this guide](https://github.com/nitishdayal/cra_closer_look) for an overview of how these tools fit together.
 
-The tradeoff is that **these tools are preconfigured to work in a specific way**. If your project needs more customization, you can ["eject"](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-run-eject) and customize it, but then you will need to maintain this configuration.
+The tradeoff is that **these tools are preconfigured to work in a specific way**. If your project needs more customization, you can ["eject"](https://github.com/echo008/xmi/blob/master/packages/xmi-scripts/template/README.md#npm-run-eject) and customize it, but then you will need to maintain this configuration.
 
 ## Popular Alternatives
 
@@ -183,7 +183,7 @@ If you prefer configuring the build yourself, [follow this guide](https://reactj
 
 ## Contributing
 
-We'd love to have your helping hand on `create-react-app`! See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on what we're looking for and how to get started.
+We'd love to have your helping hand on `xmi`! See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on what we're looking for and how to get started.
 
 ## React Native
 
@@ -200,4 +200,4 @@ We are grateful to the authors of existing related projects for their ideas and 
 
 ## License
 
-Create React App is open source software [licensed as MIT](https://github.com/facebook/create-react-app/blob/master/LICENSE).
+Create React App is open source software [licensed as MIT](https://github.com/echo008/xmi/blob/master/LICENSE).
