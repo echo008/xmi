@@ -84,8 +84,11 @@ function traverseDir(filePath, done) {
         throw error
       }
       try {
-        documentText += genCommentContent(content, filename)
-        if(!isGen && documentText) isGen = true
+        const genContent = genCommentContent(content, filename)
+        if (genContent) {
+          documentText += genContent
+          if(!isGen) isGen = true
+        }
       } catch (genError) {
         writeError(genError, filename)
       } finally {
@@ -119,8 +122,11 @@ async.eachSeries(
         }
       } else {
         try {
-          documentText += genCommentContent(fs.readFileSync(filePath, { encoding: 'utf-8' }), filePath)
-          if(!isGen && documentText) isGen = true
+          const genContent = genCommentContent(fs.readFileSync(filePath, { encoding: 'utf-8' }), filePath)
+          if (genContent) {
+            documentText += genContent
+            if(!isGen) isGen = true
+          }
         } catch (genError) {
           writeError(genError, filePath)
         } finally {
