@@ -1,15 +1,15 @@
 import React from 'react'
-import { HashRouter as Router, Switch } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import { Provider } from 'mobx-react'
+import { renderRouter } from 'xmi-router'
 
 import * as stores from './stores'
 import routes from './router'
-import { generateRoutes } from './plugins/router'
 
 const App = () => (
     <Provider {...stores}>
         <Router>
-            <Switch>{ generateRoutes(routes) }</Switch>
+            { renderRouter(routes) }
         </Router>
     </Provider>
 )

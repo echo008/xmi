@@ -18,7 +18,7 @@ class Header extends React.Component {
                         <Icon type="user" /> { loginUser.group_name || loginUser.nickname || '--' }
                     </li>
                     <li style={{ cursor: 'pointer' }}>
-                        <a href="void" onClick={handleLogout}><Icon type="logout" /> 退出</a>
+                        <p href="void" onClick={handleLogout}><Icon type="logout" /> 退出</p>
                     </li>
                 </ul>
             </Layout.Header>

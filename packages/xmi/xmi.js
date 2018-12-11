@@ -397,7 +397,8 @@ function run(
     'react-app-polyfill',
     'react-loadable',
     'react-router-dom',
-    'recompact'
+    'recompact',
+    'xmi-router'
   )
 
   // 添加mobx包
