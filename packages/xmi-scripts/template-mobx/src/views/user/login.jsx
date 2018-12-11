@@ -12,6 +12,21 @@ import { merchantSystemURL } from '../../constants/env-const'
 import '../../styles/login.less'
 
 /**
+ * __doc__
+ * 
+ * ## 登录页面
+ * 
+ * 用户输入账号、密码和图片验证码进行验证登录
+ * 
+ * ```json
+ * {
+ *  "username": "echo.zhang@wetax.com.cn"
+ *  "password": "123456"
+ *  "picture_code": "test"
+ * }
+ * ```
+ */
+/**
  * 登录页面
  */
 @enhance
@@ -25,6 +40,13 @@ class Login extends Component {
         this.props.userStore.getPictureCaptcha()
     }
 
+    /**
+     * __doc__
+     * 
+     * ### 登录请求处理
+     * 
+     * 根据用户输入信息，验证用户输入合法性，提交后台验证后，返回用户信息数据
+     */
     // 登录处理
     handleSubmit = ({ account, password, captcha }) => {
         const { appStore, userStore } = this.props

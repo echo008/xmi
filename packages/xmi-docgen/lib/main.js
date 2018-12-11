@@ -29,7 +29,8 @@ function genCommentContent(content, filename) {
     let hasComment = false
     let document = '-----\n'
     document += `**${filename}**\n\n`
-    const comments = extractComments(content)
+    // 处理装饰器@过滤问题
+    const comments = extractComments(content.replace(/\n@/g, ''))
     comments.forEach(({ type, value }) => {
         if (type === 'BlockComment') {
             const lines = value.split('\n')

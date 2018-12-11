@@ -6,6 +6,12 @@ import {
 import { appStore } from '../stores'
 
 /**
+ * __doc__
+ * 
+ * ## 测试生成服务层文档
+ */
+
+/**
  * 跳转到登录页
  */
 export function gotoLoginPage() {

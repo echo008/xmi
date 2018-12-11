@@ -4,7 +4,7 @@ const args =  process.argv.slice(2)
 
 // 生成文档
 if (args.length === 0) {
-    execSync('xmi-docgen')
+    process.stdout.write(execSync('xmi-docgen'))
 } else {
-    execSync(`xmi-docgen ${args.join(' ')}`)
+    process.stdout.write(execSync(`xmi-docgen ${args.join(' ')}`))
 }
